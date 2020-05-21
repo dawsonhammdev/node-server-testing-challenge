@@ -6,15 +6,23 @@ module.exports = {
   getAll
 };
 
-async function insert(resources) {
-  return null;
+function insert(resources) {
+  return db("resources")
+    .insert(resources, "id")
+    
 }
 
 function remove(id) {
-  return null;
+  return db("resources")
+    .where("id", id)
+    .del();
 }
 
 function getAll() {
   return db('resources');
+}
+
+function get(id) {
+  return 
 }
 
