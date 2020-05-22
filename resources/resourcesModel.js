@@ -3,7 +3,8 @@ const db = require('../data/dbConfig.js');
 module.exports = {
   insert,
   remove,
-  getAll
+  getAll,
+  get
 };
 
 function insert(resources) {
@@ -23,6 +24,6 @@ function getAll() {
 }
 
 function get(id) {
-  return 
+  return db("resources").where({id})
 }
 
